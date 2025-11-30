@@ -1,9 +1,12 @@
-
+import "./App.css";
 import UseMenu from "./components/Navbar/UseMenu";
 
-export default function App() {
- 
+function App() {
   return (
-    <UseMenu/>
+    <div className="p-6 h-[100vh]  w-full flex items-center justify-center">
+      <UseMenu/>
+    </div>
   );
 }
+
+export default App;

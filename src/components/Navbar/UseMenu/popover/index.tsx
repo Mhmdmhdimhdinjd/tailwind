@@ -1,4 +1,8 @@
 import { useFloating } from "@floating-ui/react";
+import {
+  RiAccountCircleLine,
+  RiLogoutBoxRLine,
+} from "react-icons/ri";
 
 export default function Popover({
   getFloatingProps,
@@ -18,8 +22,20 @@ export default function Popover({
         ref={setFloating}
         {...getFloatingProps()}
         style={floatingStyles}
-        className="bg-blue-400 w-6 h-6"
-      />
+        className="w-3xs p-2 bg-light-bg-paper shadow-2xl rounded-lg flex flex-col gap-2 !transition-none  *:p-2 *:bg-light-bg-default *:hover:shadow-md *:text-black *:flex *:justify-between *:items-center"
+      >
+        <div>
+          <p>Role:</p>
+          <p className="font-medium">Admin</p>
+        </div>
+        <div>
+          <p>Profile</p> <RiAccountCircleLine />
+        </div>
+        <div>
+          <p>Exit</p>
+          <RiLogoutBoxRLine />
+        </div>
+      </div>
     </>
   );
 }

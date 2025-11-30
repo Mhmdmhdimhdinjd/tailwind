@@ -254,6 +254,12 @@
   --color-black: #000;
   --color-white: #fff;
 
+  /* pallete */
+  
+  --color-light-bg-default : #fafafa;
+  --color-light-bg-paper : #ffffff;
+  
+
   /* baseSpacingUnit for tailwind
      1 in gap-1 p-1
    */

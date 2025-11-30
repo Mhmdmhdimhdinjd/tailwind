@@ -7,6 +7,7 @@ import {
   useFocus,
   useInteractions,
   limitShift,
+  safePolygon,
 } from "@floating-ui/react";
 import { useEffect, useState } from "react";
 import Popover from "./popover";
@@ -25,9 +26,10 @@ export default function UseMenu() {
       }),
       flip({ mainAxis: true }),
     ],
+    transform:false
   });
 
-  const hover = useHover(context);
+  const hover = useHover(context,{handleClose: safePolygon(),});
   const focus = useFocus(context);
   const { getReferenceProps, getFloatingProps } = useInteractions([
     hover,
@@ -46,11 +48,14 @@ export default function UseMenu() {
 
   return (
     <>
-      <button
+      <div
         ref={refs.setReference}
         {...getReferenceProps()}
-        className=" w-12 h-12 outline"
-      />
+        className="outline"
+      >
+        <p>Alex Fergosen</p>
+        <img src="src/" className="rounded-full"/>
+      </div>
 
 
 
